@@ -38,7 +38,7 @@ a#site-name {
 
 ::-webkit-scrollbar-track {
     border-radius: 2em;
-    /* background-color: rgba(73, 177, 245, .2); */
+    /*background-color: rgba(73, 177, 245, .2);*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -77,3 +77,22 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
         transform: rotate(-1turn)
     }
 }
+
+/*图片下方小图标*/
+.jg-caption-visible::before {
+    content: "⊙ ";
+} 
+.fancybox-caption__body::before {
+    content: "⊙ ";
+} 
+.img-alt.is-center::before {
+    content: "⊙ ";
+}   
+
+
+
+/* 博主昵称颜色 */
+.author-info__name {
+    color: #71b3e9;
+}
+
