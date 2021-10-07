@@ -31,25 +31,48 @@ a#site-name {
 }
 
 /*滚动条*/
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 8px;
     height: 8px
 }
 
-::-webkit-scrollbar-track {
+/*::-webkit-scrollbar-track {
     border-radius: 2em;
     /*background-color: rgba(73, 177, 245, .2);*/
-}
-
+/* }* */
+/*
 ::-webkit-scrollbar-thumb {
     background-color: rgb(255 255 255 / .3);
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
     border-radius: 2em
+}*/
+/*
+::-webkit-scrollbar-corner {
+    background-color: transparent
+} */
+/* 滚动条 */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fdbf12;
+    background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: transparent
+    background-color: transparent;
 }
+
+::-moz-selection {
+    color: #fff;
+    background-color: #fdbf12;
+}
+
+
 
 /*小风车*/
 /* 文章页H1-H6图标样式效果 */
@@ -120,28 +143,5 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     background: rgba(255,255,255,.3);
 }
 
-/*引入iconfont*/
-svg.icon {
-    width: 1em; height: 1em;
-    /* width和height定义图标的默认宽度和高度*/
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
- }
 
- @import "//at.alicdn.com/t/font_2850693_g9r9i9wobg7.css";
- .iconfont {
-    font-family: "iconfont" !important;
-    font-size: 3em;
-    /* 可以定义图标大小 */
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    }
-    .icon-shijianzhou:before {
-      color: hsl(0, 0%, 100%);
-    }
-    .icon-liuyanban:before {
-      color: hsl(0, 0%, 100%);
-    }
 
