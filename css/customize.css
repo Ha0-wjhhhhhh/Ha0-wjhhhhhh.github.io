@@ -96,3 +96,52 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     color: #71b3e9;
 }
 
+
+
+#web_bg {
+    /* 背景图像的地址（url括号里）  */
+    background-color: #FBAB7E;
+    background-image: url('../img/my_img/bg1.png'),linear-gradient(to right, rgba(250,112,154,0.35) 0%, rgba(254,225,64,0.5) 100%),url('../img/my_img/railway.jpg');
+    /* 背景图像不重复 */
+    background-repeat: no-repeat;
+    /* 背景图像大小 */
+    background-size: cover;
+  }
+
+
+
+/* 所有背景（包括首页卡片、文章页、页面页等） */
+#recent-posts>.recent-post-item,.layout>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post,.layout>#aside{
+    /* 以下代表白色透明度为0.3 */
+    background: rgba(255,255,255,.3);
+}
+/*修改文章页透明度*/
+.layout>div:first-child:not(.recent-posts) {
+    background: rgba(255,255,255,.3);
+}
+
+/*引入iconfont*/
+svg.icon {
+    width: 1em; height: 1em;
+    /* width和height定义图标的默认宽度和高度*/
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+ @import "//at.alicdn.com/t/font_2850693_g9r9i9wobg7.css";
+ .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 3em;
+    /* 可以定义图标大小 */
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+    .icon-shijianzhou:before {
+      color: hsl(0, 0%, 100%);
+    }
+    .icon-liuyanban:before {
+      color: hsl(0, 0%, 100%);
+    }
+
