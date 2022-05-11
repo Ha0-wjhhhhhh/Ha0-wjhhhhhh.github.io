@@ -4,73 +4,25 @@
   
     
     <entry>
-      <title>c++顺序结构</title>
-      <link href="/year/10/07/c-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/"/>
-      <url>/year/10/07/c-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84/</url>
+      <title>模型选择与评估</title>
+      <link href="/year/05/12/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E4%B8%8E%E8%AF%84%E4%BC%B0/"/>
+      <url>/year/05/12/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E4%B8%8E%E8%AF%84%E4%BC%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="模型选择与评估"><a href="#模型选择与评估" class="headerlink" title="模型选择与评估"></a>模型选择与评估</h1><h2 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h2><h3 id="留出法"><a href="#留出法" class="headerlink" title="留出法"></a>留出法</h3><p>留出法(hold-out)直接将数据集划分为两个互斥的集合, 其中一个集合作为训练集 $S$ ,另一个作为测试集 $T$, 即 $D = S \cup T$, $S \cap T=\emptyset$, 在S上训练出模型后, 用T来评估其测试误差，作为对泛化性能的估计。</p><p>需注意: 划分要尽可能保持数据分布的一致性。为避免数据集划分对结果产生影响，应随机多次划分取平均值。</p><p>训练集过大会导致评估结果不够准确，测试集过大会导致用训练集$S$和$D$差别过大。常见做法是将$2/3 \sim 4/5$的样本用于训练, 剩余样本用于测试。</p><h3 id="交叉验证法-k折验证法"><a href="#交叉验证法-k折验证法" class="headerlink" title="交叉验证法(k折验证法)"></a>交叉验证法(k折验证法)</h3><p>交叉验证法先将数据集$D$划分为$k$个大小相似的互斥子集, 即 $D = D_1 \cup D_2 \ldots \cup D_k, D_i \cap D_j = \emptyset$. 每个子集 $D_i$ 都尽可能保持数据分布的一致性, 即从$D$中通过分层采样得到. 然后每次用$k - 1$ 个自己的并集作为训练集，余下的那个自己作为测试集; 这样每次就可获得 $k$ 组训练/测试集, 从而可进行 k 次训练和测试, 最终返回的是这 $k$ 个测试结果的均值.</p><p>交叉验证法的效果(稳定性和保真性) 在很大程度上取决于 $k$ 的取值.</p>]]></content>
       
       
       <categories>
           
-          <category> c++ </category>
+          <category> Computer Science </category>
+          
+          <category> Machine Learning </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c++输入输出</title>
-      <link href="/year/10/07/c-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
-      <url>/year/10/07/c-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c++数据类型、变量与常量</title>
-      <link href="/year/10/07/c-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/"/>
-      <url>/year/10/07/c-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> c++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c++ </tag>
+            <tag> Machine Learning </tag>
             
         </tags>
       
