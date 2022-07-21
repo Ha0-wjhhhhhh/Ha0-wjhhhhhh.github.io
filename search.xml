@@ -4,20 +4,32 @@
   
     
     <entry>
-      <title></title>
+      <title>RISCV ISA</title>
       <link href="/year/07/21/RISC_V%20ISA/"/>
       <url>/year/07/21/RISC_V%20ISA/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="RISC-V-ISA"><a href="#RISC-V-ISA" class="headerlink" title="RISC_V ISA"></a>RISC_V ISA</h1><h2 id="R-type"><a href="#R-type" class="headerlink" title="R type"></a>R type</h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="RISCV-ISA"><a href="#RISCV-ISA" class="headerlink" title="RISCV ISA"></a>RISCV ISA</h1><h2 id="R-type"><a href="#R-type" class="headerlink" title="R type"></a>R type</h2>]]></content>
       
       
+      <categories>
+          
+          <category> 计算机基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RISCV </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>Policied of Cache</title>
+      <title>Policies of Cache</title>
       <link href="/year/07/21/Policies%20of%20Cache/"/>
       <url>/year/07/21/Policies%20of%20Cache/</url>
       
