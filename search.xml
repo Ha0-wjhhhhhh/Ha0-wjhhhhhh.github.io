@@ -4,6 +4,94 @@
   
     
     <entry>
+      <title></title>
+      <link href="/year/07/21/RISC_V%20ISA/"/>
+      <url>/year/07/21/RISC_V%20ISA/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="RISC-V-ISA"><a href="#RISC-V-ISA" class="headerlink" title="RISC_V ISA"></a>RISC_V ISA</h1><h2 id="R-type"><a href="#R-type" class="headerlink" title="R type"></a>R type</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Policied of Cache</title>
+      <link href="/year/07/21/Policies%20of%20Cache/"/>
+      <url>/year/07/21/Policies%20of%20Cache/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Policies-of-Cache"><a href="#Policies-of-Cache" class="headerlink" title="Policies of Cache"></a>Policies of Cache</h1><h2 id="Where-Can-a-Block-Be-Placed-How-is-a-Block-Found-Placement-Policy"><a href="#Where-Can-a-Block-Be-Placed-How-is-a-Block-Found-Placement-Policy" class="headerlink" title="Where Can a Block Be Placed ? How is a Block Found? : Placement Policy"></a>Where Can a Block Be Placed ? How is a Block Found? : Placement Policy</h2><ul><li>Direct mapped Cache</li><li>Full associative</li><li>Set associative<h2 id="Which-Block-Should-Be-Replaced-on-a-Cache-miss-Block-Replacement-Policy"><a href="#Which-Block-Should-Be-Replaced-on-a-Cache-miss-Block-Replacement-Policy" class="headerlink" title="Which Block Should Be Replaced on a Cache miss? :Block Replacement Policy"></a>Which Block Should Be Replaced on a Cache miss? :Block Replacement Policy</h2><a href="https://en.wikipedia.org/wiki/Cache_replacement_policies">wiki</a></li><li>Least recently used</li><li>Random Relacement</li></ul><h2 id="Write-Policy"><a href="#Write-Policy" class="headerlink" title="Write Policy"></a>Write Policy</h2><ul><li>Hit<ul><li>Write through</li><li>Write back</li><li>Write</li></ul></li><li>Miss<ul><li>Write allocate</li><li>Write no allocate</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Memory Hierarchy</title>
+      <link href="/year/07/21/Memory%20Hierarchy/"/>
+      <url>/year/07/21/Memory%20Hierarchy/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Analogy"><a href="#Analogy" class="headerlink" title="Analogy"></a>Analogy</h2><p>有一天，你打算去图书馆写一篇<strong>如何从同济保研清华</strong>的期末报告。你从图书馆书架上找到了很多资料摆在了你的桌上。这些资料覆盖了大多数你需要写的内容，但是缺少了一份关于<strong>如何撰写90页的PPT</strong>的资料。 因此，你回到图书馆书架旁寻找。你终于找到了那份名为《永远热泪盈眶》的PPT创作书，讲述了如何把PPT做到90页的秘诀。<br>很明显，当你精心选择好了一堆相关资料放在桌上后，你写报告时大部分时间都只需要翻阅桌上的书籍，而不需要返回书架寻找。如果每次只拿一本书放在桌面上，那么你将花费大量时间用来往返于座位与书架！！！<br>而做到这个的关键是你不需要等概率地阅读图书馆的每一本书，只有小部分书是你需要的，更小一部分书是你需要常常翻阅的，所以你才能将那些书放在你的桌面上，否则如果你想要在桌面快速查询资料，只能把图书馆的所有书都搬到桌面上！！</p><h2 id="Principle-of-Locality"><a href="#Principle-of-Locality" class="headerlink" title="Principle of Locality"></a>Principle of Locality</h2><p>幸好在现实生活中，我们不会需要等概率地阅读图书馆的每一本书(除非您是会科研的0x00帝君)。同样，程序也<strong>不会等概率访问每一段数据或者代码</strong>。因此，我们可以建立起一个访问速度和小容量存储一样快的大容量存储！！！这种原理被成为**局部性原理(principle of locality)**。</p><ul><li>时间局部性(temporal locality): 如果某个数据项被访问，那么在不久的将来它可能被再次访问。比如你刚借阅了某本书，那么在不久的将来你可能很快需要再次借阅它。在计算机程序中，大部分程序具有循环结构，所以指令和数据很有可能被重复访问，这带来了很明显的时间局部性。</li><li>空间局部性(spatial locality): 如果某个数据项被访问，那么它附近（地址相邻）的数据项可能很快也将被访问。例如你借阅了将PPT做到90页的武林秘籍，你可能还需要书架上挨着它的另一本将报告写到2w字的传世绝学。图书馆将相同作者或者相同主题的书籍放在相同的书架上，这增加了空间局部性。指令的顺序访问和数据本质上的空间局部性(eg. 访问数组和结构体) 都给程序带来了很强的空间局部性。<br>![[data access.png]]</li></ul><h2 id="Memory-Hierarchy"><a href="#Memory-Hierarchy" class="headerlink" title="Memory Hierarchy"></a>Memory Hierarchy</h2><p>Basic memory hierarchy structure:<br>![[basic structure of a memory hierarchy.png]]</p><p>Principle of locality + memory hierarchy presents programmer with ≈ as much memory<br>as is available in the cheapest technology at ≈ speed offered by the fastest technology</p><h2 id="Hierarchy-of-Data"><a href="#Hierarchy-of-Data" class="headerlink" title="Hierarchy of Data"></a>Hierarchy of Data</h2><p>离处理器越近的数据是那些较远层次数据的子集，最远的那层数据中包含所有数据。你大脑中当前阅读的字是书籍的子集，书籍是书桌上书的子集，而书桌上书是图书馆藏书的子集。</p><p>层次化存储可以由不同的层次组成，但是<strong>数据只能在相邻层次间复制</strong></p><ul><li>信息交换的最小单元：块(block) 或者 行(line)</li></ul><p> ![[data transfer.png]]</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>First blog</title>
+      <link href="/year/07/21/Cache%20Performance%20Analysis/"/>
+      <url>/year/07/21/Cache%20Performance%20Analysis/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Cache-Design-Space"><a href="#Cache-Design-Space" class="headerlink" title="Cache Design Space"></a>Cache Design Space</h1><ul><li>Several interacting dimensions<ul><li>Cache size</li><li>Block size</li><li>Associativity</li><li>Replacement policy</li><li>Write-through vs write-back</li><li>Write allocation</li></ul></li><li>Optimal Choice is a compromise<ul><li>Depends on access cahracteristics<ul><li>Workload</li><li>Use (I-cache, D-cache)</li></ul></li><li>Depends on technology / cost</li></ul></li><li>Simplicity often wins</li></ul><h2 id="Primary-Cache-Parameters"><a href="#Primary-Cache-Parameters" class="headerlink" title="Primary Cache Parameters"></a>Primary Cache Parameters</h2><ul><li>Block size / line size<ul><li>how many bytes of data in each cache entry</li></ul></li><li>Associativity<ul><li>how many ways in each set?</li><li>Direct-mapped (abbrev. DM) ==&gt; Associativity  = 1</li><li>Set-associative ==&gt; 1 &lt; Associativity &lt; # Entries</li><li>Fully associative ==&gt; Associativity = # Entries</li></ul></li><li>Capacity(bytes)  = Total  # Entries * Block size</li><li>Entries = # Sets * Associativity</li><li>AMAT = Hit time + Miss rate * Miss penalty</li></ul><h3 id="Increasing-Associativity"><a href="#Increasing-Associativity" class="headerlink" title="Increasing Associativity?"></a>Increasing Associativity?</h3><ul><li>Hit time increases<ul><li>need to add  mux(es) to get the correct way to processor</li><li>smaller increases in hit time with ability to build reasonably efficient wide muxes</li></ul></li><li>Miss rate decreases<ul><li>less conflict misses</li><li>most gain is from 1 -&gt; 2 -&gt; 4 way with limited benefit from higher associativities    </li></ul></li><li>Miss penalty mostly unchanged<ul><li>replacement policy runs <strong>in parallel</strong> with fetching missing line from memory</li></ul></li></ul><h3 id="Increasing-Entries"><a href="#Increasing-Entries" class="headerlink" title="Increasing # Entries?"></a>Increasing # Entries?</h3><ul><li>Hit time increases<ul><li>reading tags and data from larger memory structures (fixed line size)</li></ul></li><li>Miss rate decreases<ul><li>less capacity misses and less conflict misses</li><li>Architect’s rule of thumb: miss rate drops ~2x for every ~4x increase in<br>capacity (only a gross approximation)</li></ul></li><li>Miss penalty unchanged</li></ul><p><em>At some point, increase in hit time for a larger cache may<br>overcome the improvement in hit rate, yielding a decrease<br>in performance</em></p><h4 id="Increasing-Block-Size"><a href="#Increasing-Block-Size" class="headerlink" title="Increasing Block Size?"></a>Increasing Block Size?</h4><ul><li>Hit time unchanged<ul><li>might be slight hit-time reduction as number of tags is reduced, so faster to access</li></ul></li><li>Miss rate<ul><li>Goes down at first due to spatial locality, then increases due to increased  conflict misses due to fewer blocks in cache</li></ul></li><li>Miss penalty<ul><li>Rises with longer block size, but with fixed constant initial latency that is  amortized over whole block  27</li></ul></li></ul><h2 id="Miss-Rate"><a href="#Miss-Rate" class="headerlink" title="Miss Rate"></a>Miss Rate</h2><ul><li><strong>Global miss rate</strong> - Global miss rate – the fraction of references that miss some  level of a multilevel cache</li><li><strong>Local miss rate</strong> - the fraction of references to one level of a cache that miss<ul><li>Local Miss rate L2$ = L2$ Misses / L1$ Misses  <pre><code>                              = L2$ Misses / total_L2_accesses</code></pre></li><li>Global Miss rate = L2$ Misses / Total Accesses  <pre><code>                         = (L2$ Misses / L1$ Misses) × (L1$ Misses / Total Accesses)                           = Local Miss rate L2$ × Local Miss rate L1$</code></pre></li></ul></li></ul><h2 id="Analyzing-Caches-with-Code"><a href="#Analyzing-Caches-with-Code" class="headerlink" title="Analyzing Caches with Code"></a>Analyzing Caches with Code</h2><ul><li>A conceptually simple set of nested for loops:</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="built_in">array</span>[MAXLEN]  </span><br><span class="line"><span class="keyword">for</span>(size = <span class="number">1024</span>; size &lt;= MAXLEN; size = size &lt;&lt; <span class="number">1</span>)&#123;  </span><br><span class="line"><span class="keyword">for</span>(stride = <span class="number">1</span>; stride &lt;= size; stride = stride &lt;&lt; <span class="number">1</span>)&#123;  </span><br><span class="line"><span class="comment">// Some initialization to eliminate compulsory misses  </span></span><br><span class="line"><span class="comment">// Repeat this loop enough to get good timing for computing AMAT  </span></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; size; i += stride)&#123;  </span><br><span class="line"><span class="built_in">array</span>[i] = <span class="built_in">array</span>[i] + i  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// Now add some timing information for how long the  </span></span><br><span class="line"><span class="comment">// for loop takes  </span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Cache-Miss-Types"><a href="#Cache-Miss-Types" class="headerlink" title="Cache Miss Types"></a>Cache Miss Types</h3><ul><li>Compulsory: Miss that occurs on first reference<ul><li>An infinitely large cache would still incur the miss</li></ul></li><li>Capacity: A miss that occurs because the cache isn’t big enough<ul><li>An infinitely large cache would not miss</li></ul></li><li>Conflict: A miss that occurs because the associativity doesn’t allow the items to be stored simultaneously<ul><li>A fully associative cache of the same size would not miss</li></ul></li></ul><p>Actual Test<br>![[L1 hitting.png.png]]<br>![[L1 missing.png.png]]</p><ul><li>32kB: no misses, 64KB misses<ul><li>Cache capacity : 32 kB cache</li></ul></li><li>On 64kB, a step at 64B<ul><li>It is probably a 64B line size</li></ul></li><li>On 64kB, no misses when accessing 4 lines<ul><li>it is 4-way set associative<br>![[L2 fail.png.png]]</li></ul></li><li>512 kB L2 Cache</li><li>64B line size</li><li><strong>Looks like</strong> 64-way Associative</li></ul><h3 id="Failure-Cases"><a href="#Failure-Cases" class="headerlink" title="Failure Cases"></a>Failure Cases</h3><ul><li>Capacity<ul><li>Up until the test exceeds the cache capacity…<ul><li>Every thing is fine!</li></ul></li><li>Bute once sizeof(array) &gt; cache size:<ul><li>Start get Cache missing !</li></ul></li></ul></li><li>Spacial Locality<ul><li>if only a single item in each cache line is ever accessed</li><li>worst-case: each line is only accessed in one location<ul><li>when stride * sizeof(int) == block size</li></ul></li><li>Combined with wherethe capacity break occurs</li></ul></li><li>Associativity<ul><li>if array is 2x the cache capacity<ul><li>but yout are strding at &gt;= 2 * block size</li></ul></li><li>you aren’t using all cache entries<ul><li>by definition all your misses are no longer capcacity misses but <strong>conflict misses</strong></li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cache </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模型选择与评估</title>
       <link href="/year/05/12/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E4%B8%8E%E8%AF%84%E4%BC%B0/"/>
       <url>/year/05/12/%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E4%B8%8E%E8%AF%84%E4%BC%B0/</url>
